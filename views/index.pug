@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  // 데이터베이스에서 가져온 내용을 출력하는 부분 추가
+  table
+    thead
+      tr
+        th ID
+        th Name
+    tbody
+      each row in data
+        tr
+          td= row.id
+          td= row.name
